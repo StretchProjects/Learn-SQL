@@ -5,6 +5,7 @@
  * For use with MySQL 5.6.21 onwards (compatibility with previous versions is untested)
  */
 
+
 /*
  * Ensure that there are no exising instances of this database and initialise a clean version
  */ 
