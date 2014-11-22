@@ -89,7 +89,8 @@ INSERT INTO `staff` VALUES
   (6844,'James','Server',6698,'1981-09-08',1500,0,30),
   (6900,'Turner','Server',6698,'1981-12-03',950,NULL,30),
   (6782,'Miller','HR',6839,'1989-06-09',2450,NULL,10),
-  (6934,'Clark','Messenger',6782,'1985-01-23',1300,NULL,10);
+  (6934,'Clark','Messenger',6782,'1985-01-23',1300,NULL,10),
+  (6945, 'King', 'Cleaner',6698,'1999-04-07',1000, NULL, 30);
 
 /*
  * Table structure for table `salary_range`
@@ -143,5 +144,33 @@ INSERT INTO `customer` VALUES
   (0003,'1996-02-06','I Perry','London','England',5,'Full breakfast',2),
   (0003,'1997-11-17','I Parry','London','England',3,'Bacon sandwich',2),
   (0004,'1997-07-14','P Fowler','Birmingham','England',6,'Toast',1),
-  (0004,'1999-05-30','P Fowler','Birmigham','England',7,'Chicken',2),
-  (0004,'2000-08-28','P Fowler','Birmingham','United Kingdom',11,'Potato',6);
+  (0004,'1999-05-30','P Fowler','Birmingham','England',7,'Chicken',2),
+  (0004,'2000-08-28','P Fowler','Birmingham','England',11,'Potato',6);
+
+/*
+ * Table structure for table `training`
+ */
+
+create table training (
+  course_id int unique auto_increment primary key comment 'This is the course ID number',
+  course_name varchar(100) not null
+);
+
+/*
+ * Dumping data for table `training`
+ */
+
+insert into training (course_name) values 
+  ('test'),
+  ('test'),
+  ('test');
+
+/*
+ * Table structure for table `staff_training`
+ */
+
+create table staff_training (
+  staff_number int,
+  course_id int,
+  date_taken date
+);
